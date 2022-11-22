@@ -4,8 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
   <title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
-  <link href='//fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
-  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
   <style>{{{css}}}</style>
   <style media="print">{{{print}}}</style>
 </head>
@@ -39,7 +37,7 @@
                 {{#if website}}
                   <ul>
                     <li>Website</li>
-                    <li>{{website}}</li>
+                    <li><a href="{{website}}">{{website}}</a></li>
                   </ul>
                 {{/if}}
                 {{#if email}}
@@ -102,7 +100,7 @@
               <div class="content-text skills-listing">
                 {{#foreach resume.skills}}
                   <p>
-                    <span class="name">
+                    <span class="title">
                       {{#if name}}
                         <strong>
                           {{name}}{{#if level}}{{else}}:{{/if}}
@@ -147,9 +145,9 @@
                     <div class="content-text work-listing education-listing">
                       {{#ifCond company '||' position}}
                         {{#if $first}}
-                          <p>
+                          <p class="title">
                         {{else}}
-                          <p>
+                          <p class="title">
                         {{/if}}
                         {{#ifCond website '&&' company}}
                           <strong>{{position}}</strong>
