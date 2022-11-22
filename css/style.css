@@ -3,13 +3,12 @@
 :root {
   --body-background-color: #002b36; /* solarized base03 */
   --border-color: #e0e0e0;
-  --header-p-color: #93a1a1; /* solarized base1 */
+  --subtitle-color: #93a1a1; /* solarized base1 */
+  --title-color: #dc332f; /* solarized red */
   --new-background-color: #81c784;
   --new-border-color: #757575;
-  --subtitle-color: #586e75; /* solarized base01 */
   --hover-color: #268bd2; /* solarized blue */
   --link-color: #2aa198; /* solarized cyan */
-  --header-color: #dc332f; /* solarized red */
 
   --right-font-family: "Share Tech Mono";
   --left-font-family: "Share Tech Mono";
@@ -94,14 +93,14 @@ header p {
   text-align:center;
   font-family: var(--left-font-family);
   margin:0;
-  color: var(--header-p-color);
+  color: var(--title-color);
 }
 
 .first-name {
 }
 
 .title {
-  color: var(--header-color);
+  color: var(--subtitle-color);
 }
 
 .subtitle {
@@ -191,7 +190,6 @@ body > div > article > div > section:last-child {
 
 .content-text ul li:first-child {
   width:35%;
-  color: var(--subtitle-color);
 }
 
 .content-text ul li a, div.content-text.work-listing.education-listing > p > strong > a {

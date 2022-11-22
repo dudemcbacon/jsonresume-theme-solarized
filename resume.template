@@ -108,7 +108,7 @@
                       {{/if}}
                     </span>
                     {{#if level}}
-                      <span>({{level}}):</span>
+                      <span class="title">({{level}}):</span>
                     {{/if}}
                     {{#if keywords.length}}
                       {{#commalist keywords}}{{.}}{{/commalist}}
