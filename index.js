@@ -5,8 +5,6 @@ function render(resume) {
     // Load css and template
     var css = fs.readFileSync(__dirname + "/css/style.css", "utf-8");
     var template = fs.readFileSync(__dirname + "/resume.template", "utf-8");
-    // Load print-specific css
-    var print = fs.readFileSync(__dirname + "/css/print.css", "utf-8");
 
     // Register custom handlebars extensions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     // foreach loops //
@@ -55,7 +53,6 @@ function render(resume) {
     // Compile
     return Handlebars.compile(template)({
         css: css,
-        print: print,
         resume: resume
     });
 }

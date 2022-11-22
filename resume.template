@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
   <title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
   <style>{{{css}}}</style>
-  <style media="print">{{{print}}}</style>
 </head>
 <body>
   <div class="resume-wrapper">
