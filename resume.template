@@ -36,13 +36,13 @@
               <div class="content-text">
                 {{#if website}}
                   <ul>
-                    <li>Website</li>
+                    <li class="title">Website</li>
                     <li><a href="{{website}}">{{website}}</a></li>
                   </ul>
                 {{/if}}
                 {{#if email}}
                   <ul>
-                    <li>Email</li>
+                    <li class="title">Email</li>
                     <li><a href="mailto:{{email}}">{{email}}</a></li>
                   </ul>
                 {{/if}}
@@ -197,9 +197,9 @@
                     <div class="content-text work-listing education-listing">
                       {{#if institution}}
                         {{#if $first}}
-                          <p style="margin-top:0;" class="heading">{{institution}}</p>
+                          <p style="margin-top:0;" class="title">{{institution}}</p>
                         {{else}}
-                          <p style="margin-top:0;" class="heading">{{institution}}</p>
+                          <p style="margin-top:0;" class="title">{{institution}}</p>
                         {{/if}}
                       {{/if}}
                       {{#if area}}
@@ -296,7 +296,7 @@
                   </div>
                   <div class="content-text work-listing">
                     {{#if awarder}}
-                      <strong><p class="heading">{{awarder}}</p></strong>
+                      <strong><p class="title">{{awarder}}</p></strong>
                     {{/if}}
                     {{#if summary}}
                       <p class="highlight">{{summary}}</p>

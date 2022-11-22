@@ -28,7 +28,6 @@ body, html {
   left:10px;
 
   font-family: var(--right-font-family);
-  font-size: 0.6em;
 }
 
 .new {
@@ -99,7 +98,6 @@ header p {
 }
 
 .first-name {
-   font-size: 1.05em;
 }
 
 .title {
@@ -109,8 +107,6 @@ header p {
 .subtitle {
   font-family: var(--left-font-family);
   padding-top:.3em;
-  font-size:0.55em;
-  font-weight:500;
   color: var(--subtitle-color);
 }
 
@@ -156,20 +152,14 @@ body > div > article > div > section:last-child {
 
 .content-cat {
   font-family: var(--left-font-family);
-  font-variant:small-caps;
-  font-weight:300;
-  letter-spacing: 1px;
   color: var(--header-p-color);
-  font-size:0.975em;
-  text-align:center;
+  text-align:right;
   vertical-align:middle;
-  padding-left:6.66%;
+  padding-right:1%;
   width:30%;
 }
 
 .content-cat p {
-  font-size:0.55em;
-  font-weight:600;
   margin-bottom:0;
 }
 
@@ -196,14 +186,12 @@ body > div > article > div > section:last-child {
 
 .content-text ul li {
   font-family: var(--right-font-family);
-  font-size:0.7em;
   display:inline-block;
 }
 
 .content-text ul li:first-child {
   width:35%;
   color: var(--subtitle-color);
-  font-weight:600;
 }
 
 .content-text ul li a, div.content-text.work-listing.education-listing > p > strong > a {
@@ -217,7 +205,6 @@ body > div > article > div > section:last-child {
 
 .work-listing p {
   font-family: var(--right-font-family);
-  font-size:0.7em;
   margin-left:2em;
   margin-top:0.45em;
   margin-bottom: 0.45em;
@@ -229,8 +216,6 @@ div.content-text.work-listing.education-listing > p:nth-child(2) {
 
 .work-listing .highlight {
   font-family: var(--right-font-family);
-  font-size:0.7em;
-  font-weight:400;
   color: var(--subtitle-color);
   margin-left:3.25em;
   list-style-type: disc;
@@ -239,7 +224,6 @@ div.content-text.work-listing.education-listing > p:nth-child(2) {
 }
 
 .education-listing > .heading {
-  font-weight:600;
   margin-top:0.75em;
   margin-left:2em;
 }
@@ -254,7 +238,6 @@ div.content-text.work-listing.education-listing > p:nth-child(2) {
 
 .profiles-listing ul li, .profiles-listing ul li:first-child {
   width:32%;
-  font-weight: normal;
 }
 
 .work-content, .education-content {
@@ -268,9 +251,6 @@ section.content.education-content > div > div.content-cat {
 
 div.content-text.skills-listing > p {
   font-family: var(--right-font-family);
-  font-size:0.7em;
-  font-weight:400;
-
   margin-left: 2em;
   margin-top: 0.45em;
   margin-bottom: 0.45em;
