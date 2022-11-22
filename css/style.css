@@ -9,7 +9,7 @@
   --subtitle-color: #586e75; /* solarized base01 */
   --hover-color: #268bd2; /* solarized blue */
   --link-color: #2aa198; /* solarized cyan */
-  --header-color: #2aa198; /* solarized red */
+  --header-color: #dc332f; /* solarized red */
 
   --right-font-family: "Share Tech Mono";
   --left-font-family: "Share Tech Mono";
@@ -218,7 +218,7 @@ body > div > article > div > section:last-child {
 .work-listing p {
   font-family: var(--right-font-family);
   font-size:0.7em;
-  color: var(--subtitle-color);
+  color: var(--header-color);
   margin-left:2em;
   margin-top:0.45em;
   margin-bottom: 0.45em;
