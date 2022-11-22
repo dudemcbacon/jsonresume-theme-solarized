@@ -12,11 +12,6 @@
       {{#resume.basics}}
         <header>
           <div class="header-content">
-            {{#if picture}}
-              <div class="header-pic">
-                <img src="{{picture}}" class="pic" />
-              </div>
-            {{/if}}
             <div class="header-text">
               <p>
                 {{name}}
@@ -25,70 +20,74 @@
             </div>
           </div>
         </header>
+      {{/resume.basics}}
         <div class="content-wrapper">
-          <!-- CONTACT -->
-          <section class="content">
-            <div class="row">
-              <div class="content-cat">
-                Contact
+          {{#resume.basics}}
+            <!-- CONTACT -->
+            <section class="content">
+              <div class="row">
+                <div class="content-cat">
+                  Contact
+                </div>
+                <div class="content-text">
+                  {{#if website}}
+                    <ul>
+                      <li class="title">Website</li>
+                      <li><a href="{{website}}">{{website}}</a></li>
+                    </ul>
+                  {{/if}}
+                  {{#if email}}
+                    <ul>
+                      <li class="title">Email</li>
+                      <li><a href="mailto:{{email}}">{{email}}</a></li>
+                    </ul>
+                  {{/if}}
+                  {{#if phone}}
+                    <ul>
+                      <li>Phone</li>
+                      <li>{{phone}}</li>
+                    </ul>
+                  {{/if}}
+                </div>
               </div>
-              <div class="content-text">
-                {{#if website}}
-                  <ul>
-                    <li class="title">Website</li>
-                    <li><a href="{{website}}">{{website}}</a></li>
-                  </ul>
-                {{/if}}
-                {{#if email}}
-                  <ul>
-                    <li class="title">Email</li>
-                    <li><a href="mailto:{{email}}">{{email}}</a></li>
-                  </ul>
-                {{/if}}
-                {{#if phone}}
-                  <ul>
-                    <li>Phone</li>
-                    <li>{{phone}}</li>
-                  </ul>
-                {{/if}}
-              </div>
-            </div>
-          </section>
+            </section>
+          {{/resume.basics}}
 
-          {{#location}}
-            {{#ifCond address '||' city}}
-              <section class="content">
-                <div class="row">
-                  <div class="content-cat">
-                    Location
-                  </div>
-                  <div class="content-text">
-                    {{#if address}}
-                      <ul>
-                        <li>Address</li>
-                        <li>{{address}}</li>
-                      </ul>
-                    {{/if}}
-                    {{#if city}}
-                      {{#if postalCode}}
+          {{#resume.basics}}
+            {{#location}}
+              {{#ifCond address '||' city}}
+                <section class="content">
+                  <div class="row">
+                    <div class="content-cat">
+                      Location
+                    </div>
+                    <div class="content-text">
+                      {{#if address}}
                         <ul>
-                          <li>Postal Code & City</li>
-                          <li>{{postalCode}} {{city}}</li>
+                          <li>Address</li>
+                          <li>{{address}}</li>
                         </ul>
                       {{/if}}
-                    {{/if}}
-                    {{#if region}}
-                      <ul>
-                        <li>Region</li>
-                        <li>{{region}}</li>
-                      </ul>
-                    {{/if}}
+                      {{#if city}}
+                        {{#if postalCode}}
+                          <ul>
+                            <li>Postal Code & City</li>
+                            <li>{{postalCode}} {{city}}</li>
+                          </ul>
+                        {{/if}}
+                      {{/if}}
+                      {{#if region}}
+                        <ul>
+                          <li>Region</li>
+                          <li>{{region}}</li>
+                        </ul>
+                      {{/if}}
+                    </div>
                   </div>
-                </div>
-              </section>
-            {{/ifCond}}
-          {{/location}}
-      {{/resume.basics}}
+                </section>
+              {{/ifCond}}
+            {{/location}}
+          {{/resume.basics}}
 
           {{#if resume.skills.length}}
           <section class="content">
@@ -110,7 +109,7 @@
                       <span class="title">({{level}}):</span>
                     {{/if}}
                     {{#if keywords.length}}
-                      {{#commalist keywords}}{{.}}{{/commalist}}
+                      {{commalist keywords}}
                     {{/if}}
                   </p>
                 {{/foreach}}
@@ -119,15 +118,9 @@
           </section>
           {{/if}}
 
-
-        
           {{#if resume.work.length}}
             {{#foreach resume.work}}
-              {{#if $first}}
                 <section class="content">
-              {{else}}
-                <section class="content work-content">
-              {{/if}}
                   <div class="row">
                     <div class="content-cat big-text">
                       {{#if $first}}
@@ -143,11 +136,7 @@
                     </div>
                     <div class="content-text work-listing education-listing">
                       {{#ifCond company '||' position}}
-                        {{#if $first}}
                           <p class="title">
-                        {{else}}
-                          <p class="title">
-                        {{/if}}
                         {{#ifCond website '&&' company}}
                           <strong>{{position}}</strong>
                           at <strong><a href="{{website}}">{{company}}</a></strong>
@@ -166,7 +155,7 @@
                       {{/if}}
                       {{#if highlights.length}}
                         {{#each highlights}}
-                          <p class="highlight">{{.}}</p>
+                          <p class="highlight">{{this}}</p>
                         {{/each}}
                       {{/if}}
                     </div>
@@ -177,11 +166,7 @@
 
           {{#if resume.education.length}}
             {{#foreach resume.education}}
-              {{#if $first}}
                 <section class="content">
-              {{else}}
-                <section class="content education-content">
-              {{/if}}
                   <div class="row">
                     <div class="content-cat big-text">
                       {{#if $first}}
@@ -231,11 +216,7 @@
                   </div>
                   <div class="content-text work-listing">
                     {{#if organization}}
-                      {{#if $first}}
-                        <p>
-                      {{else}}
-                         <p>
-                      {{/if}}
+                      <p>
                         <strong>{{organization}}</strong>
                       </p>
                     {{/if}}
@@ -246,7 +227,7 @@
                     {{/if}}
                     {{#if highlights.length}}
                       {{#each highlights}}
-                        <p class="highlight">{{.}}</p>
+                        <p class="highlight">{{this}}</p>
                       {{/each}}
                     {{/if}}
                   </div>
@@ -277,7 +258,6 @@
             </section>
           {{/if}}
 
-
           {{#if resume.awards.length}}
             {{#foreach resume.awards}}
               <section class="content">
@@ -305,7 +285,6 @@
               </section>
             {{/foreach}}
           {{/if}}
-
 
           {{#resume.basics}}
             <!-- PROFILES -->
@@ -345,7 +324,7 @@
                       <span class="name">
                       </span>
                       {{#if keywords.length}}
-                        {{#commalist keywords}}{{.}}{{/commalist}}
+                        {{#commalist keywords}}{{this}}{{/commalist}}
                       {{/if}}
                     </p>
                   {{/foreach}}
@@ -353,7 +332,6 @@
               </div>
             </section>
           {{/if}}
-
         </div>
     </article>
   </div>

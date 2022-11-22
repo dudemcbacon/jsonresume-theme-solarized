@@ -16,7 +16,9 @@
   "scripts": {
     "start": "resume serve"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  },
   "keywords": [
     "jsonresume",
     "json",

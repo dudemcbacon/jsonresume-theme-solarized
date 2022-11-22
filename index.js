@@ -47,8 +47,8 @@ function render(resume) {
     });
     // comma separated lists //
     // http://stackoverflow.com/a/18831911
-    Handlebars.registerHelper('commalist', function(items, options) {
-        return options.fn(items.join(', '));
+    Handlebars.registerHelper('commalist', function(items) {
+        return items.join(', ');
     });
     // Compile
     return Handlebars.compile(template)({
