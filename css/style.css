@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 :root {
-  --body-background-color: #002b36;
+  --body-background-color: #002b36; /* solarized base03 */
   --border-color: #e0e0e0;
   --content-text-color: #0277bd;
-  --header-p-color: #212121;
+  --header-p-color: #93a1a1; /* solarized base1 */
   --hover-color: #4fc3f7;
   --new-background-color: #81c784;
   --new-border-color: #757575;
-  --subtitle-color: #424242;
+  --subtitle-color: #586e75; /* solarized base01 */
 
   --right-font-family: "Share Tech Mono";
   --left-font-family: "Share Tech Mono";
@@ -114,10 +114,10 @@ header p {
 .paper {
   margin: 0 auto;
   margin-bottom:1em;
-  background-color:white;
+  background-color: var(--body-background-color);
   width:60%;
   padding:0.5em 0 0.5em 0;
-  border-top: 1px solid var(---border-color);
+  border-top: 1px solid var(--border-color);
   border-left: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
   border-bottom: 3px solid var(--border-color);
