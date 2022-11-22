@@ -21,23 +21,6 @@ body, html {
   background-color: var(--body-background-color);
 }
 
-.note {
-  display:block;
-  position: absolute;
-  top:10px;
-  left:10px;
-
-  font-family: var(--right-font-family);
-}
-
-.new {
-  background-color: var(--new-background-color);
-  border: 1px solid var(--border-color);
-  padding: 1px;
-  border-radius: 4px;
-
-}
-
 /* Header */
 
 header {
@@ -58,31 +41,6 @@ header {
   width:4em;
   border: 2px solid var(--border-color);
   transition : all 0.5s linear;
-
-}
-
-@-webkit-keyframes wiggle {
-  0%   {
-    transform: rotate(0deg);
-  }
-  25%  {
-    transform: rotate(-30deg);
-  }
-  50%  {
-    transform: rotate(15deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-.pic:hover {
-  /*Webkit fix*/
-  -webkit-transform: translateZ(0);
-
-  cursor:pointer;
-
-  -webkit-animation: wiggle 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 .header-text {
@@ -97,9 +55,6 @@ header p {
   color: var(--title-color);
 }
 
-.first-name {
-}
-
 .title {
   color: var(--subtitle-color);
 }
@@ -110,16 +65,8 @@ header p {
   color: var(--subtitle-color);
 }
 
-/* Information */
-
 .paper {
   background-color: var(--body-background-color);
-}
-
-@media(max-width:992px) {
-  .paper {
-    width:80%;
-  }
 }
 
 /* Content Part */
@@ -215,7 +162,6 @@ div.content-text.work-listing.education-listing > p:nth-child(2) {
 
 .work-listing .highlight {
   font-family: var(--right-font-family);
-  color: var(--subtitle-color);
   margin-left:3.25em;
   list-style-type: disc;
   list-style-position: inside;
@@ -257,34 +203,4 @@ div.content-text.skills-listing > p {
 
 div.content-text.skills-listing > p > {
   color: var(--header-p-color);
-}
-
-@media screen and (max-width: 600px) {
-  body, html {
-    padding-top: 30px;
-  }
-
-  .paper {
-    width:95%;
-  }
-
-  .row div {
-    display: block;
-  }
-
-  .content-cat {
-    width: 100%;
-  }
-
-  .content-text ul li {
-    width: 100%;
-  }
-
-  .content-text ul li:first-child {
-    width: 100%;
-  }
-
-  .education-listing > .highlight {
-    margin-left: 30px;
-  }
 }
