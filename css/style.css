@@ -9,6 +9,7 @@
   --new-border-color: #757575;
   --hover-color: #268bd2; /* solarized blue */
   --link-color: #2aa198; /* solarized cyan */
+  --text-color: #586e75; /* solarized base01 */
 
   --right-font-family: "Share Tech Mono";
   --left-font-family: "Share Tech Mono";
@@ -151,7 +152,7 @@ body > div > article > div > section:last-child {
 
 .content-cat {
   font-family: var(--left-font-family);
-  color: var(--header-p-color);
+  color: var(--title-color);
   text-align:right;
   vertical-align:middle;
   padding-right:1%;
