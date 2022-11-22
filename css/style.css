@@ -218,7 +218,6 @@ body > div > article > div > section:last-child {
 .work-listing p {
   font-family: var(--right-font-family);
   font-size:0.7em;
-  color: var(--header-color);
   margin-left:2em;
   margin-top:0.45em;
   margin-bottom: 0.45em;
