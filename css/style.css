@@ -3,12 +3,13 @@
 :root {
   --body-background-color: #002b36; /* solarized base03 */
   --border-color: #e0e0e0;
-  --content-text-color: #0277bd;
   --header-p-color: #93a1a1; /* solarized base1 */
-  --hover-color: #4fc3f7;
   --new-background-color: #81c784;
   --new-border-color: #757575;
   --subtitle-color: #586e75; /* solarized base01 */
+  --link-color: #268bd2; /* solarized blue */
+  --hover-color: #2aa198; /* solarized cyan */
+  --header-color: #2aa198; /* solarized red */
 
   --right-font-family: "Share Tech Mono";
   --left-font-family: "Share Tech Mono";
@@ -213,7 +214,7 @@ body > div > article > div > section:last-child {
 
 .content-text ul li a, div.content-text.work-listing.education-listing > p > strong > a {
   text-decoration: none;
-  color: var(--content-text-color);
+  color: var(--link-color);
 }
 
 .content-text ul li a:hover {
