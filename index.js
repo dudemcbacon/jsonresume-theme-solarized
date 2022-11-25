@@ -4,7 +4,7 @@ var Handlebars = require("handlebars");
 function render(resume) {
     // Load css and template
     var css = fs.readFileSync(__dirname + "/css/style.css", "utf-8");
-    var template = fs.readFileSync(__dirname + "/resume.template", "utf-8");
+    var template = fs.readFileSync(__dirname + "/resume.hbs", "utf-8");
 
     // Register custom handlebars extensions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     // foreach loops //
