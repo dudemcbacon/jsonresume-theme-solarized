@@ -7,20 +7,6 @@
     />
     <title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
     <style>{{{css}}}</style>
-    <script>
-      function inIframe () {
-        try {
-          return window.self !== window.top;
-        } catch (e) {
-          return true;
-        }
-      }
-
-      if (inIframe) {
-        var header = document.querySelector('header')
-        header.style.display = 'none';
-      }
-    </script>
 
   </head>
   <body>
@@ -360,5 +346,19 @@
         </div>
       </article>
     </div>
+    <script>
+      function inIframe () {
+        try {
+          return window.self !== window.top;
+        } catch (e) {
+          return true;
+        }
+      }
+
+      if (inIframe) {
+        var header = document.querySelector('header')
+        header.style.display = 'none';
+      }
+    </script>
   </body>
 </html>
