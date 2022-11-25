@@ -18,7 +18,6 @@
 body,
 html {
   color: var(--text-color);
-  padding-top: 2.5em;
   background-color: var(--body-background-color);
 }
 
